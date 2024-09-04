@@ -1,0 +1,20 @@
+
+1.
+  npm inti
+
+2.
+  npm install nodemon
+
+3.
+ nodemon ./server.js localhost 8080
+
+4.
+ rd /s node_modules
+
+ rd /s /q node_modules
+
+5.
+ npm install ввв
+ ( ??????? node_modules)
+
+
