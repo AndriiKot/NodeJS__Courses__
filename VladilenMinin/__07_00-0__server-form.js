@@ -1,19 +1,22 @@
-const http = require("node:http");
+﻿const http = require("node:http");
 const port = process.env.PORT || 3000;
-const bodyParser = require("body-parser"); // Import body-parser
 
 const server = http.createServer((req, res) => {
-  // Parse the body for POST requests
   if (req.method === "POST") {
-    bodyParser.urlencoded({ extended: false })(req, res, () => {
-      // Form data will be accessible in req.body
-      console.log(req.body); // Example: Log the title
+    const body = [];
 
-      // ... further logic to handle the data ...
+    res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
 
-      res.end(`<h1>Form data submitted!</h1>`);
+    req.on("data", (chunk) => {
+      body.push(Buffer.from(chunk)); // Append chunk.toString();
+    });
+    req.on("end", () => {
+      const data = new URLSearchParams(body.toString());
+      console.log(data.get("title"));
+      res.end(`<h1>Form data submitted ФФФФФФФ!</h1>`);
     });
   } else if (req.method === "GET") {
+    console.log(req.url);
     res.writeHead(200, { "Content-Type": "text/html" });
     res.end(`
       <h1>Form</h1>
