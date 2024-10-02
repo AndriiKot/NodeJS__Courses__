@@ -1,6 +1,6 @@
 const http = require("node:http");
 const port = process.env.PORT || 3000;
-const bodyParser = require("body-parser"); // Import body-parser
+const bodyParser = require("body-parser"); // Import body-parser 2024: 35 000 000 Weekly Doanloads
 
 const server = http.createServer((req, res) => {
   // Parse the body for POST requests
