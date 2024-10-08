@@ -1,11 +1,9 @@
 const http = require("node:http");
 const fs = require("node:fs");
 
-http
-  .createServer((req, res) => {
+http.createServer((req, res) => {
     getTitles(res);
-  })
-  .listen(8000, "127.0.0.1", () => console.log("listening on 127.0.0.1:8000"));
+  }).listen(8000, "127.0.0.1", () => console.log("listening on 127.0.0.1:8000"));
 
 function getTitles(res) {
   fs.readFile("./title.json", (err, data) => {
