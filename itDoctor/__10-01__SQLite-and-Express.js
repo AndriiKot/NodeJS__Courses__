@@ -1,7 +1,9 @@
 require("dotenv").config();
 const express = require("express");
-const Article = require("./db.js").Article;
-const read = require("node-readability");
+const sqlite3 = require("sqlite3").verbose();
+const dbName = "later.sqlite";
+const db = new sqlite3.Database(dbName);
+
 const app = express();
 const port = process.env.PORT || 8000;
 
@@ -10,12 +12,37 @@ app.use(express.urlencoded({ extended: true }));
 
 app.set("port", port);
 
-// testing
-// add
-// curl --data "url=http://localhost:3000/articles" http://localhost:3000/articles
-// delete
-// curl -X DELETE http://localhost:3000/articles/2
+// Создание таблицы, если ее нет
+db.serialize(() => {
+  const sql = `
+    CREATE TABLE IF NOT EXISTS articles
+    	(id integer primary key, title TEXT, content TEXT)
+  `;
+  db.run(sql);
+});
 
+// Класс для работы с базой данных
+class Article {
+  static all(cb) {
+    db.all("SELECT * FROM articles", cb);
+  }
+
+  static find(id, cb) {
+    db.get("SELECT * FROM articles WHERE id = ?", id, cb);
+  }
+
+  static create(data, cb) {
+    const sql = "INSERT INTO articles(title, content) VALUES (?, ?)";
+    db.run(sql, data.title, data.content, cb);
+  }
+
+  static delete(id, cb) {
+    if (!id) return cb(new Error("Please provide an id"));
+    db.run("DELETE FROM articles WHERE id = ?", id, cb);
+  }
+}
+
+// Маршруты
 app.get("/articles", (req, res, next) => {
   Article.all((err, articles) => {
     if (err) {
