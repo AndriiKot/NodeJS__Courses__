@@ -14,7 +14,7 @@
       <th height=33 width=100>SQLite</th>
       <th height=33 width=100>JSON</th>
       <th height=33 width=100>Curl</th>
-      <th height=33 width=100>EJS</th>
+      <th height=33 width=150>EJS</th>
     </tr>
   </thead>
   <tbody>
@@ -54,7 +54,7 @@
           <img src=https://github.com/AndriiKot/___Icons__and__Links___/blob/main/icons/curl.svg alt=Curl>
         </a>
       </td>
-      <td height=100 width=100>
+      <td height=100 width=150>
         <a href=https://ejs.co/>
           <h6><%= EJS %></h6>
         </a>
