@@ -9,15 +9,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.set("view engine", "ejs");
-app.set("views", __dirname + "/views");
 
 app.set("port", port);
-
-// testing
-// add
-// curl --data "url=http://localhost:3000/articles" http://localhost:3000/articles
-// delete
-// curl -X DELETE http://localhost:3000/articles/2
 
 app.get("/articles", (req, res, next) => {
   Article.all((err, articles) => {
@@ -26,7 +19,7 @@ app.get("/articles", (req, res, next) => {
     }
     res.format({
       html: () => {
-        res.render("articles", { articles });
+        res.render("articles.ejs", { articles });
       },
       json: () => {
         res.send(articles);

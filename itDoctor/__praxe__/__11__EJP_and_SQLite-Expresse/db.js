@@ -2,12 +2,6 @@ const sqlite3 = require("sqlite3").verbose();
 const dbName = "later.sqlite";
 const db = new sqlite3.Database(dbName);
 
-// testing
-// add
-// curl --data "url=http://localhost:3000/articles" http://localhost:3000/articles
-// delete
-// curl -X DELETE http://localhost:3000/articles/2
-
 db.serialize(() => {
   const sql = `
     CREATE TABLE IF NOT EXISTS articles
