@@ -14,7 +14,7 @@
       <th height=33 width=100>SQLite</th>
       <th height=33 width=100>JSON</th>
       <th height=33 width=100>Curl</th>
-      <th height=33 width=100>EJP</th>
+      <th height=33 width=100>EJS</th>
     </tr>
   </thead>
   <tbody>
@@ -52,6 +52,11 @@
       <td height=100 width=100>
         <a href=https://curl.se/docs/>
           <img src=https://github.com/AndriiKot/___Icons__and__Links___/blob/main/icons/curl.svg alt=Curl>
+        </a>
+      </td>
+      <td height=100 width=100>
+        <a href=https://curl.se/docs/>
+          <img src="" alt=EJS>
         </a>
       </td>
     </tr>
