@@ -55,9 +55,11 @@
         </a>
       </td>
       <td height=100 width=150>
-        <a href=https://ejs.co/>
-          <h3 style="text-align: center"><%= EJS %></h3>
-        </a>
+          <h3 style="text-align: center">
+                  <a href=https://ejs.co/>
+											<%= EJS %>        
+									</a>
+					</h3>
       </td>
     </tr>
   </tbody>
