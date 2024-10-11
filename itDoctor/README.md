@@ -56,7 +56,7 @@
       </td>
       <td height=100 width=100>
         <a href=https://curl.se/docs/>
-          <img src="" alt=EJS>
+          <h1>EJS</h1>
         </a>
       </td>
     </tr>
