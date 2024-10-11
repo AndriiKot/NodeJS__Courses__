@@ -55,8 +55,8 @@
         </a>
       </td>
       <td height=100 width=100>
-        <a href=https://curl.se/docs/>
-          <h1>EJS</h1>
+        <a href=https://ejs.co/>
+          <h1><%= EJS %></h1>
         </a>
       </td>
     </tr>
