@@ -56,7 +56,7 @@
       </td>
       <td height=100 width=150>
         <a href=https://ejs.co/>
-          <h6><%= EJS %></h6>
+          <h3 style="text-align: center"><%= EJS %></h3>
         </a>
       </td>
     </tr>
