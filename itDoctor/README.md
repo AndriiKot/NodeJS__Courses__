@@ -14,6 +14,7 @@
       <th height=33 width=100>SQLite</th>
       <th height=33 width=100>JSON</th>
       <th height=33 width=100>Curl</th>
+      <th height=33 width=100>EJP</th>
     </tr>
   </thead>
   <tbody>
