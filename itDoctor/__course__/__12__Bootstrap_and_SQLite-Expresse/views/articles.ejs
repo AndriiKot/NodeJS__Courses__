@@ -1,0 +1,5 @@
+<%- include ('head'); %> <% articles.forEach((article )=> { %>
+<div class="alert alert-primary" role="alert">
+  <a href="/articles/<%= article.id %>"> <%= article.title %> </a>
+</div>
+<% }) %> <%- include ('foot'); -%>
