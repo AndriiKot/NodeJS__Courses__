@@ -19,6 +19,11 @@ app.get("/about", (req, res) => {
   res.sendFile(path.join(pathTemplate, "about.html"));
 });
 
+app.get("/user/:username/:id", (req, res) => {
+  console.log(req.params);
+  res.send(`User: ${req.params.username}, id: ${req.params.id}`);
+});
+
 app.listen(port, () =>
   console.log(
     `Express запущен на http://${host}:${port};
