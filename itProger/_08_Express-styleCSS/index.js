@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 const host = process.env.HOST || "localhost";
 
 app.set("view engine", "ejs");
-app.use(express.static("templates"));
+app.use(express.static("public"));
 
 app.get("/", (req, res) => {
   res.render("index");
