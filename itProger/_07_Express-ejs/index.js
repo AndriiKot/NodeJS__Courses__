@@ -1,15 +1,11 @@
 "use strict";
 
-const http = require("node:http");
-const fs = require("node:fs");
-const path = require("node:path");
 const express = require("express");
 
 const app = express();
 
 const port = process.env.PORT || 3000;
 const host = process.env.HOST || "localhost";
-const pathTemplate = path.join(__dirname, "templates");
 
 app.set("view engine", "ejs");
 
