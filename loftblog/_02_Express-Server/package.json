@@ -1,0 +1,16 @@
+{
+  "name": "_02_express-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": ["express", "nodejs"],
+  "author": "AndriiKot",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
